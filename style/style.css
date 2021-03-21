@@ -226,6 +226,18 @@ body {
     margin: 0 auto;
 }
 
+.header__top-content_button:focus,
+.header__top-content_button:active,
+.header__top-content_button:hover,
+.how-it-works__subs_button:focus,
+.how-it-works__subs_button:active,
+.how-it-works__subs_button:hover,
+.categories__content_item-button:focus,
+.categories__content_item-button:active,
+.categories__content_item-button:hover {
+    cursor: pointer;
+}
+
 .header__top-content_pic {
     margin: 0 auto;
 }
@@ -249,7 +261,9 @@ body {
 
 /* SECTION ABOUT US style | Begin */
 
-.about-us {
+.about-us,
+.how-it-works,
+.categories {
     margin-bottom: 10px;
 }
 
@@ -261,24 +275,28 @@ body {
 }
 
 .about-us__title,
-.how-it-works__title {
+.how-it-works__title,
+.categories__title {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
 .about-us__title_icon,
-.how-it-works__title_icon {
+.how-it-works__title_icon,
+.categories__title_icon {
     margin: auto 8px auto 0;
 }
 
 .about-us__title_text,
-.how-it-works__title_text {
+.how-it-works__title_text,
+.categories__title_text {
     font-size: 2.6rem;
 }
 
 .about-us__title_paragraph,
-.how-it-works__title_paragraph {
+.how-it-works__title_paragraph,
+.categories__title_paragraph {
     display: none;
 }
 
@@ -355,6 +373,64 @@ body {
 
 /* SECTION HOW IT WORKS style | End */
 
+/* SECTION CATEGORIES style | Begin */
+
+.categories__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 215px;
+    margin: 0 auto;
+}
+
+.categories__content_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #f9bdbd;
+    border-bottom-left-radius: 60px;
+    border-top-right-radius: 60px;
+    margin-bottom: 15px;
+    width: 215px;
+    height: 350px;
+}
+
+.categories__content > div:nth-child(2),
+.categories__content > div:nth-child(5) {
+    background: #f7dea6;
+}
+
+.categories__content > div:nth-child(3) {
+    background: #a8dcec;
+}
+
+.categories__content_item-title {
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 15px auto 20px 10px;
+}
+
+.categories__content_item-img {
+    max-width: 200px;
+}
+
+.categories__content_item-button {
+    width: 40%;
+    margin: 10px 10px 10px auto;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.categories__content > div:nth-child(2) .categories__content_item-img,
+.categories__content > div:nth-child(3) .categories__content_item-img,
+.categories__content > div:nth-child(4) .categories__content_item-img,
+.categories__content > div:nth-child(5) .categories__content_item-img {
+    margin: 0 auto;
+}
+
+/* SECTION CATEGORIES style | End */
+
 @media (min-width: 576px) {
     /* HEADER style | Begin */
 
@@ -405,21 +481,27 @@ body {
 
     /* SECTION ABOUT US style | Begin */
 
+    .about-us,
+    .how-it-works {
+        margin: 0 auto 15px auto;
+    }
+
     .about-us {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 90%;
-        margin: 0 auto;
     }
 
     .about-us__title_text,
-    .how-it-works__title_text {
+    .how-it-works__title_text,
+    .categories__title_text {
         margin: auto 16px auto 0;
     }
 
     .about-us__title_line,
-    .how-it-works__title_line {
+    .how-it-works__title_line,
+    .categories__title_line {
         display: flex;
         background: black;
         height: 1.6px;
@@ -427,7 +509,8 @@ body {
         margin: auto 0;
     }
 
-    .about-us__title_paragraph {
+    .about-us__title_paragraph,
+    .categories__title_paragraph {
         display: block;
         font-weight: 700;
         font-size: 3.2rem;
@@ -488,11 +571,10 @@ body {
 
     /* SECTION HOW IT WORKS style | Begin */
 
-    .how-it-works__content {
+    .how-it-works__content,
+    .categories__content {
         display: grid;
-        grid-template-areas:
-            "how-it-works__content_first-step how-it-works__content_second-step"
-            "how-it-works__content_third-step how-it-works__content_fourth-step";
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .how-it-works__title_paragraph {
@@ -504,6 +586,22 @@ body {
     }
 
     /* SECTION HOW IT WORKS style | Begin */
+
+    /* SECTION CATEGORIES style | Begin */
+
+    .categories__title {
+        margin-bottom: 15px;
+    }
+
+    .categories__content {
+        width: 100%;
+    }
+
+    .categories__content_item {
+        margin: 0 auto 15px auto;
+    }
+
+    /* SECTION CATEGORIES style | End */
 }
 
 @media (min-width: 768px) {
@@ -544,16 +642,19 @@ body {
     }
 
     .about-us__title_text,
-    .how-it-works__title_text {
+    .how-it-works__title_text,
+    .categories__title_text {
         font-size: 3rem;
     }
 
     .about-us__title_line,
-    .how-it-works__title_line {
+    .how-it-works__title_line,
+    .categories__title_line {
         width: 30%;
     }
 
-    .about-us__title_paragraph {
+    .about-us__title_paragraph,
+    .categories__title_paragraph {
         font-size: 4.2rem;
     }
 
@@ -576,6 +677,26 @@ body {
     }
 
     /* SECTION ABOUT US style | End */
+
+    /* SECTION CATEGORIES style | Begin */
+
+    .categories__content_item {
+        width: 250px;
+        height: 400px;
+    }
+
+    .categories__content_item-title {
+        font-size: 2.4rem;
+        margin: 25px auto 10px 15px;
+    }
+
+    .categories__content_item-button {
+        width: 123px;
+        height: 40px;
+        margin: 10px 10px 20px auto;
+    }
+
+    /* SECTION CATEGORIES style | End */
 }
 
 @media (min-width: 992px) {
@@ -651,12 +772,14 @@ body {
     /* SECTION ABOUT US style | Begin */
 
     .about-us__title_text,
-    .how-it-works__title_text {
+    .how-it-works__title_text,
+    .categories__title_text {
         font-size: 3.6rem;
         font-weight: 700;
     }
 
-    .about-us__title_paragraph {
+    .about-us__title_paragraph,
+    .categories__title_paragraph {
         font-size: 5.2rem;
     }
 
@@ -676,10 +799,19 @@ body {
 
     .how-it-works__content {
         display: grid;
-        grid-template-areas: "how-it-works__content_first-step how-it-works__content_second-step how-it-works__content_third-step how-it-works__content_fourth-step";
+        grid-template-columns: repeat(4, 1fr);
     }
 
     /* SECTION ABOUT US style | End */
+
+    /* SECTION CATEGORIES style | Begin */
+
+    .categories__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* SECTION CATEGORIES style | End */
 }
 
 @media (min-width: 1200px) {
@@ -711,7 +843,9 @@ body {
         font-size: 3.6rem;
     }
 
-    .header__top-content_paragraph {
+    .header__top-content_paragraph,
+    .about-us__title_paragraph,
+    .categories__title_paragraph {
         font-size: 7.2rem;
     }
 
@@ -738,10 +872,6 @@ body {
         width: 100%;
     }
 
-    .about-us__title_paragraph {
-        font-size: 7.2rem;
-    }
-
     /* SECTION ABOUT US style | End */
 
     /* SECTION ABOUT US style | Begin */
@@ -754,7 +884,15 @@ body {
         font-size: 7.2rem;
     }
 
-    /* SECTION ABOUT US style | Begin */
+    /* SECTION ABOUT US style | End */
+
+    /* SECTION CATEGORIES style | Begin */
+
+    .categories__title_line {
+        width: 25%;
+    }
+
+    /* SECTION CATEGORIES style | End */
 }
 
 @media (min-width: 1400px) {
